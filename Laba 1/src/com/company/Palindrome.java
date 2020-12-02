@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Palindrome {
-    // Класс для реверсирования строк и определения палиндромов
+    // Класс для инвертирования строк и определения палиндромов
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите строку для ее инвертирования и проверки на палиндромность");
@@ -19,12 +19,13 @@ public class Palindrome {
         for (int pos = s.length() - 1; pos > -1; pos--) {
             finalString.append(s.charAt(pos));
         }
-        return "Инвертированная строка:\n" + finalString.toString();
+        System.out.println("Инвертированная строка:/n");
+        return "finalString.toString();
     }
 
     public static String Is_Palindrome(String s) {
         // Проверка на палиндромность
         String reverse = Reverse_String(s);
-        return (reverse.equals(s)? "Палиндром":"Не палиндром");
+        return (reverse.equals(s)? "Строка является палиндромом":"Строка не является палиндромом");
     }
 }
